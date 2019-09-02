@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>练习</title>
+<link href="../CSS/ceshi.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+	function check(){
+		var radios = document.getElementsByClassName("radios");
+		var scores = 0;
+		for(var i=0;i<radios.length;i++){//题数
+			var question = document.getElementsByName("q" + (i+1));
+			for(var j=0;j<question.length;j++){//选项数
+				if(question[j].checked){//该选项是否被选中
+					if(question[j].value==1){
+						document.getElementById(i).innerHTML = "&nbsp;&nbsp;正确！";
+						scores = scores+1;
+					}
+					break;
+				}
+			}
+		}
+		document.getElementById("score").value=scores;
+	}
+</script>
+</head>
+
+<body>
+	<div class="main">
+ 		<div class="question">
+			<div class="radios">✈(选择)下列能实现缩放变形的属性是（&nbsp;）<br/>
+			<label><input name="q1" type="radio" value="1" />rotate<span id="0" class="ture"></span></label>
+			<label><input name="q1" type="radio" value="0" />skew </label>
+			<label><input name="q1" type="radio" value="0" />scale </label>
+			<label><input name="q1" type="radio" value="0" />translate </label>
+			</div>
+			<br/><br/>
+			<div class="radios"> 2+2=？<br/>
+			<label><input name="q2" type="radio" value="0" />2 </label>
+			<label><input name="q2" type="radio" value="1" />4<span id="1" class="ture"></span> </label>
+			<label><input name="q2" type="radio" value="0" />6 </label>
+			<label><input name="q2" type="radio" value="0" />8 </label>
+			</div>
+			<br/><br/>
+			<div class="radios"> 3+3=？<br/>
+			<label><input name="q3" type="radio" value="0" />2 </label>
+			<label><input name="q3" type="radio" value="0" />4 </label>
+			<label><input name="q3" type="radio" value="1" />6<span id="2" class="ture"></span> </label>
+			<label><input name="q3" type="radio" value="0" />8 </label>
+			</div>
+			<br/><br/>
+			<div class="radios"> 4+4=？<br/>
+			<label><input name="q4" type="radio" value="0" />2 </label>
+			<label><input name="q4" type="radio" value="0" />4 </label>
+			<label><input name="q4" type="radio" value="0" />6 </label>
+			<label><input name="q4" type="radio" value="1" />8<span id="3" class="ture"></span> </label>
+			</div>
+			<br/><br/>
+			<div class="radios"> 5+5=？<br/>
+			<label><input name="q5" type="radio" value="0" />2 </label>
+			<label><input name="q5" type="radio" value="0" />4 </label>
+			<label><input name="q5" type="radio" value="0" />6 </label>
+			<label><input name="q5" type="radio" value="1" />10<span id="4" class="ture"></span> </label>
+			</div>
+			<br/><br/>
+			答对题数:
+			<input type="text" id="score"><br/><br/>
+			<button onclick="check()">提交</button>
+  		</div>
+	</div>
+</body>
+</html>

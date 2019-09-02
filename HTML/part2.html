@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>进入学习</title>
+<link href="../CSS/part2.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="main">
+		<div class="nav">
+		<ul>
+			<li>
+				<a class="n" href="#"></a>
+				<ul>
+					<li><a class="n1" onClick="location.href='example1.html'"></a></li>
+					<li><a class="n2" onClick="location.href='study.html'"></a></li>
+					<li><a class="n3" onClick="location.href='experience.html'"></a></li>
+					<li><a class="n4" onClick="location.href='practice.html'"></a></li>
+					<li><a class="n5" onClick="location.href='conclude.html'"></a></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+		<div class="p1" onClick="location.href='study.html'"></div>
+		<div class="p2" onClick="location.href='part2.html'"></div>
+		<div class="p3" onClick="location.href='part3.html'"></div>
+		<div class="text">
+			<span style="color: #BBEFCE; font-size: 25px;">chapter2 过渡（transition）</span>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;transition属性，用来实现属性值平滑过渡，视觉上产生动画效果。这种过渡效果可以在鼠标点击、获得焦点、被点击或对元素任何改变中触发。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;transition有4个属性值：</p>
+   			<p style="color: #BBEFCE; font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;① transition-property:执行过渡的属性</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transition-property用来指定哪个属性使用过渡动画效果。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;none:所有属性都不应用过渡效果;</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;all：默认值。当值为all时，元素产生任何属性值变化时都将执行transition效果;</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ident：元素属性名。通过ident指定具体哪些属性。如果指定的多个属性中有某个属性不能应用过渡效果，其他属性还是生效的。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;过渡属性只有具备一个中点值的属性（需要产生动画的属性）才能具备过渡效果。</p>
+   			<p style="color: #BBEFCE; font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;② transition-duration:指定完成过渡需要的时间</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transition-duration用来设置从旧属性过渡到新属性需要的时间，即持续时间。</p>
+   			<p style="color: #BBEFCE; font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;③ transition-timing-function:在延续时间段，过渡变换的速率变化，简单理解就是指定过渡函数</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transition-timing-function属性指的是过渡的“缓动函数”。通过这个函数会建立一条加速度曲线，因此在整个transition变化过程中，变化速度可以不断改变。主要包括以下几种函数：</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ease:默认值，元素样式从初始状态过渡到终止状态速度由快到慢，逐渐变慢。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;linear：意思是线性过渡，即过渡过程恒速。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ease-in:速度越来越快，呈现加速状态，通常称为“渐显效果”。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ease-out:速度越来越慢，呈现减速状态，通常称为“渐隐效果”。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ease-in-out速度先加速后减速，称为“渐显渐隐效果”。</p>
+			<p style="color: #BBEFCE; font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;④ transition-delay:过渡延迟时间</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transition-delay设置改变属性值后多长时间开始执行动画。</p>
+			<p style="color: #BBEFCE; font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;⑤ 属性简写</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在改变多个css属性的transition效果时，把几个transition声明用逗号隔开，然后每个属性就都有各自的过渡时间和效果。</p>
+		</div>
+		<div class="back" onClick="location.href='study.html'"></div>
+		<div class="next" onClick="location.href='part3.html'"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+@charset "utf-8";
+.main{
+	background-color:dimgray;
+    margin:auto;
+	width:800px;
+	height: 600px;
+    position: relative;
+	/*背景图片*/
+}
+.question{
+	position: absolute;
+	top: 25%;
+	left: 50px;
+	color: black;
+	font-family: "微软雅黑";
+	background-color: #ccc;
+	border: solid 2px #ccc;
+	width: 700px;
+	height: 430px;
+	overflow-y: scroll;
+}
+.uls{
+	list-style: none;
+	line-height: 20px;
+	font-weight: 500;
+}
+.F{
+	color: red;
+}
+.T{
+	color: green;
+}

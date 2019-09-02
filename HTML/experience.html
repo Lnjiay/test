@@ -1,0 +1,364 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>代码体验</title>
+<link href="../CSS/experience.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+	function runWin(code) {
+		cod=document.all(code)
+		var code=cod.value;
+		if (code!=""){
+			var newwin=window.open('','',''); //打开一个窗口并赋给变量newwin。
+			newwin.opener = null // 防止代码对页面修改
+			newwin.document.write(code); //向这个打开的窗口中写入代码code，这样就实现了运行代码功能。
+			newwin.document.close();
+    	}
+	}
+</script>
+</head>
+
+<body>
+	<div class="main">
+		<div class="nav">
+		<ul>
+			<li>
+				<a class="n" href="#"></a>
+				<ul>
+					<li><a class="n1" onClick="location.href='example1.html'"></a></li>
+					<li><a class="n2" onClick="location.href='study.html'"></a></li>
+					<li><a class="n3" onClick="location.href='experience.html'"></a></li>
+					<li><a class="n4" onClick="location.href='practice.html'"></a></li>
+					<li><a class="n5" onClick="location.href='conclude.html'"></a></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+		<textarea name="textarea" id="run0" style="display: none;">
+			<div class="big"><div class="test"><a style="line-height: 100px; cursor: pointer;" onclick="window.close();">back</a>
+			</div></div>
+			<style>
+				.big{
+					margin:auto;
+					top:50px;
+					width:1000px;
+					height: 620px;
+					position: relative;
+				}
+				.test{
+					width: 100px;
+					height: 100px;
+					background-color: rgba(0,0,0,0.50);
+					text-align: center;
+				}
+			</style>
+		</textarea>
+		<textarea name="textarea" id="run1" style="display: none;">
+		<div class="big">
+			<div class="test1"></div>
+			<div class="test2">
+				<a style="line-height: 100px; cursor: pointer;" onclick="window.close();">back</a>
+			</div>
+		</div>
+			<style>
+				.big{
+					margin:auto;
+					top:50px;
+					width:1000px;
+					height: 620px;
+					position: relative;
+				}
+				.test1{
+					width: 100px;
+					height: 100px;
+					background-color: rgba(0,0,0,0.50);
+					position: absolute;
+				}
+				.test2{
+					width: 100px;
+					height: 100px;
+					background-color: rgba(251,0,4,0.50);
+					transform: rotate(30deg);
+					text-align: center;
+					position: absolute;
+				}
+			</style>
+		</textarea>
+		<textarea name="textarea" id="run2" style="display: none;">
+		<div class="big">
+			<div class="test1"></div>
+			<div class="test2">
+				<a style="line-height: 100px; cursor: pointer;" onclick="window.close();">back</a>
+			</div>
+		</div>
+			<style>
+				.big{
+					margin:auto;
+					top:50px;
+					width:1000px;
+					height: 620px;
+					position: relative;
+				}
+				.test1{
+					width: 100px;
+					height: 100px;
+					background-color: rgba(0,0,0,0.50);
+					position: absolute;
+				}
+				.test2{
+					width: 100px;
+					height: 100px;
+					background-color: rgba(255,118,0,0.50);
+					transform: skew(30deg,15deg);
+					text-align: center;
+					position: absolute;
+				}
+			</style>
+		</textarea>
+		<textarea name="textarea" id="run3" style="display: none;">
+		<div class="big">
+			<div class="test1"></div>
+			<div class="test2">
+				<a style="line-height: 100px; cursor: pointer;" onclick="window.close();">back</a>
+			</div>
+		</div>
+			<style>
+				.big{
+					margin:auto;
+					top:50px;
+					width:1000px;
+					height: 620px;
+					position: relative;
+				}
+				.test1{
+					width: 100px;
+					height: 100px;
+					background-color: rgba(0,0,0,0.50);
+					position: absolute;
+				}
+				.test2{
+					width: 100px;
+					height: 100px;
+					background-color: rgba(255,237,0,0.50);
+					transform: scale(2,1.5);
+					text-align: center;
+					position: absolute;
+				}
+			</style>
+		</textarea>
+		<textarea name="textarea" id="run4" style="display: none;">
+		<div class="big">
+			<div class="test1"></div>
+			<div class="test2">
+				<a style="line-height: 100px; cursor: pointer;" onclick="window.close();">back</a>
+			</div>
+		</div>
+			<style>
+				.big{
+					margin:auto;
+					top:50px;
+					width:1000px;
+					height: 620px;
+					position: relative;
+				}
+				.test1{
+					width: 100px;
+					height: 100px;
+					background-color: rgba(0,0,0,0.50);
+					position: absolute;
+				}
+				.test2{
+					width: 100px;
+					height: 100px;
+					background-color: rgba(18,255,0,0.50);
+					transform: translate(50px,30px);
+					text-align: center;
+					position: absolute;
+				}
+			</style>
+		</textarea>
+		<textarea name="textarea" id="run5" style="display: none;">
+		<div class="big">
+			<div class="test1"></div>
+			<div class="test2">
+				<a style="line-height: 100px; cursor: pointer;" onclick="window.close();">back</a>
+			</div>
+		</div>
+			<style type="text/css">
+				.big{
+					margin:auto;
+					top:50px;
+					width:1000px;
+					height: 620px;
+					position: relative;
+				}
+				.test1{
+					width: 100px;
+					height: 100px;
+					background-color: rgba(0,0,0,0.50);
+					position: absolute;
+				}
+				.test2{
+					width: 100px;
+					height: 100px;
+					background-color:rgba(0,255,179,0.50);
+					text-align: center;
+					position: absolute;
+				}
+				.test2:hover{
+					width: 200px;
+					transition:width 3s ease-in;
+
+				}
+			</style>
+		</textarea>
+		<textarea name="textarea" id="run6" style="display: none;">
+		<div class="big">
+			<div class="test1"></div>
+			<div class="test2">
+				<a style="line-height: 100px; cursor: pointer;" onclick="window.close();">back</a>
+			</div>
+		</div>
+			<style type="text/css">
+				.big{
+					margin:auto;
+					top:50px;
+					width:1000px;
+					height: 620px;
+					position: relative;
+				}
+				.test1{
+					width: 100px;
+					height: 100px;
+					background-color: rgba(0,0,0,0.50);
+					position: absolute;
+				}
+				.test2{
+					width: 100px;
+					height: 100px;
+					background-color: rgba(10,0,255,0.50);
+					text-align: center;
+					position: absolute;
+				}
+				@keyframes name{
+					0%{
+						width: 100px;
+						height: 100px;
+					}
+					50%{
+						width: 150px;
+						height: 100px;
+					}
+					100%{
+						width: 150px;
+						height: 150px;
+					}
+				}
+				.test2:hover{
+					animation: 3s name;
+			</style>
+		</textarea>
+		
+		<div class="text">
+			<span style="color: brown; font-size: 20px;">HTML代码</span>
+			<p>&nbsp;&nbsp;&nbsp;&lt;div class="test"&gt;&lt;/div&gt;</p>
+			<div style="height: 30px;"></div>
+			<span style="color:cadetblue; font-size: 20px;">CSS3代码</span>
+			<pre style="font-family: 微软雅黑;">
+  <p style="color: cornflowerblue;">✈</p>
+  .test{
+   		width: 100px;
+   		height: 100px;
+   		background-color: rgba(0,0,0,0.50);
+   }
+			</pre>
+			<input onclick="runWin('run0')" type="button" value="运行代码" style="cursor:hand" class="button">
+			<pre style="font-family: 微软雅黑;">
+  <p style="color: cornflowerblue;">✈①</p>
+  .test{
+   		width: 100px;
+   		height: 100px;
+   		background-color:rgba(251,0,4,0.50);
+   		transform: rotate(30deg);
+   }
+			</pre>
+			<input onclick="runWin('run1')" type="button" value="运行代码" style="cursor:hand" class="button">
+			<pre style="font-family: 微软雅黑;">
+  <p style="color: cornflowerblue;">✈②</p>
+  .test{
+   		width: 100px;
+   		height: 100px;
+   		backrgbaground-color: (255,118,0,0.50);
+   		transform: skew(30deg,15deg);
+   }
+			</pre>
+			<input onclick="runWin('run2')" type="button" value="运行代码" style="cursor:hand" class="button">
+			<pre style="font-family: 微软雅黑;">
+  <p style="color: cornflowerblue;">✈③</p>
+  .test{
+   		width: 100px;
+   		height: 100px;
+   		background-color: rgba(255,237,0,0.50);
+   		transform: scale(2,1.5);
+   }
+			</pre>
+			<input onclick="runWin('run3')" type="button" value="运行代码" style="cursor:hand" class="button">
+			<pre style="font-family: 微软雅黑;">
+  <p style="color: cornflowerblue;">✈④</p>
+  .test{
+   		width: 100px;
+   		height: 100px;
+   		background-color: rgba(18,255,0,0.50);
+   		transform: translate(50px,30px);
+   }
+			</pre>
+			<input onclick="runWin('run4')" type="button" value="运行代码" style="cursor:hand" class="button">
+			<pre style="font-family: 微软雅黑;">
+  <p style="color: cornflowerblue;">✈⑤</p>
+  .test{
+		 width: 100px;
+		 height: 100px;
+		 background-color:rgba(0,255,179,0.50);
+   }
+   .test:hover{
+		 width: 200px;
+		 transition-property: width;
+		 transition-duration: 2s;
+		 transition-timing-function: ease-in;
+   }
+			</pre>
+			<input onclick="runWin('run5')" type="button" value="运行代码" style="cursor:hand" class="button">
+			<pre style="font-family: 微软雅黑;">
+  <p style="color: cornflowerblue;">✈⑥</p>
+  .test{
+  		 width: 100px;
+  		 height: 100px;
+  		 background-color: rgba(10,0,255,0.50);
+  }
+  @keyframes name{
+  		 0%{
+  		 	width: 100px;
+  		 	height: 100px;
+  		 }
+  		 50%{
+  		 	width: 150px;
+  		 	height: 100px;
+  		 }
+  		 100%{
+  		 	width: 150px;
+  		 	height: 150px;
+  		 }
+  }
+  .test:hover{
+  		 animation: 3s name;
+  }
+			</pre>
+			<input onclick="runWin('run6')" type="button" value="运行代码" style="cursor:hand" class="button">
+		</div>
+	
+		
+		<div class="back" onClick="location.href='part3.html'"></div>
+		<div class="next" onClick="location.href='practice.html'"></div>
+	</div>
+</body>
+</html>

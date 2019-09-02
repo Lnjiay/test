@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>进入学习</title>
+<link href="../CSS/part3.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="main">
+		<div class="nav">
+		<ul>
+			<li>
+				<a class="n" href="#"></a>
+				<ul>
+					<li><a class="n1" onClick="location.href='example1.html'"></a></li>
+					<li><a class="n2" onClick="location.href='study.html'"></a></li>
+					<li><a class="n3" onClick="location.href='experience.html'"></a></li>
+					<li><a class="n4" onClick="location.href='practice.html'"></a></li>
+					<li><a class="n5" onClick="location.href='conclude.html'"></a></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+		<div class="p1" onClick="location.href='study.html'"></div>
+		<div class="p2" onClick="location.href='part2.html'"></div>
+		<div class="p3" onClick="location.href='part3.html'"></div>
+		<div class="text">
+			<span style="color: #F3F8A6; font-size: 25px;">chapter3 动画（animation）</span>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;animation属性通过一些关键帧中元素属性的改变来实现动画效果。当然也可以控制动画持续时间，动画迭代次数等。transition是animation的简化版，animation可以做更多的控制，也更强大。</p>
+			&nbsp;&nbsp;<span style="color: #F3F8A6; font-size: 20px;">1.keyframes</span>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;keyframes意思是“关键帧”，在关键帧会改变元素属性的计算值。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Keyframes语法由"@keyframes"开头，后面紧跟这个“动画的名称”加上一对花括号“{}”，括号中是一些不同时间段的样式规则，规则写法同css样式。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;一个“@keyframes”中的样式规则是由多个百分比构成的，如"0%"到"100%"之间，可以在一个规则中创建多个百分比，分别在每一个百分比中给需要有动画效果的元素加上不同的属性，从而让元素达到一种不断变化的效果，比如说移动、改变元素颜色、位置、大小、形状等。</p>
+		  	<p>&nbsp;&nbsp;&nbsp;&nbsp;两个关键字，"from"和"to"表示一个动画从哪开始，到哪结束，也就是"from"相当于"0%"，而"to"相当于"100%"。</p>
+			&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: indianred; font-size: 18px;">keyframes语法示例：</span>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;@keyframes IDENT {<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from {<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Properties:Properties value;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Percentage {<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Properties:Properties value;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to {<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Properties:Properties value;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;或者全部写成百分比的形式<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;@keyframes IDENT {<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0% {<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Properties:Properties value;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Percentage {<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Properties:Properties value;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100% {<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Properties:Properties value;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;} </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;keyframes定义每一帧的动画，但只写keyframes是没用的，需要调用才能生效。而调用就用到animation了。</p>
+			&nbsp;&nbsp;<span style="color: #F3F8A6; font-size: 20px;">2.animation</span>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;animation没有事件触发时，在页面加载后显式的随着时间变化来改变元素css样式，从而产生动画效果。</p>
+  			<p>&nbsp;&nbsp;&nbsp;&nbsp;animation包含下面属性： animation-name，animation-iteration-count，animation-direction，animation-play-state，animation-fill-mode，animation-duration，animation-timing-function，animation-delay。</p>
+   			<p style="color: indianred;">&nbsp;&nbsp;&nbsp;① animation-name是最关键的，表示应用哪个帧动画。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 默认值为none，默认情况没有动画效果。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; animation-name属性调用@keyframes定义好的动画，必须和"@keyframes"定义的动画名称完全一致（区分大小写）。</p>
+   			<p style="color: indianred;">&nbsp;&nbsp;&nbsp;② animation-iteration-count属性用来定义动画的播放次数。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 属性值：</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 默认值为1，即动画从开始到结束只播放一次。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; infinite:动画将会无限次播放。</p>
+   			<p style="color: indianred;">&nbsp;&nbsp;&nbsp;③ animation-direction设置动画播放方向。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 属性值：</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; normal:默认值，如果值为normal时，动画每次循环都是向前播放。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alternate：奇数次播放动画是按顺序播放各帧动画，偶数次播放动画是按逆序播放各帧动画。</p>
+   			<p style="color: indianred;">&nbsp;&nbsp;&nbsp;④ animation-play-state用来控制元素动画的播放状态。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 属性值：</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; running:running是其默认值，作用是类似于音乐播放器一样，可以通过paused将正在播放的动画停下来，也可以通过running将暂停的动画重新播放。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; paused:暂停播放。</p>
+   			<p style="color: indianred;">&nbsp;&nbsp;&nbsp;⑤ animation-fill-mode规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用的样式。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 属性值：</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; none：默认值，动画执行前后不改变元素的任何样式。就是说动画在第一个关键帧播放之前不影响元素，最后一个关键帧播放完后停止影响元素。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; forwards:动画完成后呆在最后一帧，就是保持结束时的状态。这里的最后一帧取决于animation-direction和animation-iteration-count。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; backwards:在animation-delay期间应用第一帧。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; both:根据animation-direction轮流应用forwards和backwards规则。</p>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b style="color: indianred;">Note</b>:forwards和backwards关键字都是有s的。</p>
+			<p>&nbsp;&nbsp;&nbsp;⑥ animation-duration定义播放动画持续的时间，也就是完成从0%到100%一次动画所需要的时间。单位s。</p>
+  			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 默认值为0，意味着动画时长0，即没有动画效果（如果值为负值被视为0）。</p>
+   			<p>&nbsp;&nbsp;&nbsp;⑦ animation-timing-function属性用来设置动画播放方式。</p>
+   			<p>&nbsp;&nbsp;&nbsp;⑧ animation-delay定义事件触发到动画开始执行的时间，即延时。</p>
+		</div>
+		<div class="back" onClick="location.href='part2.html'"></div>
+		<div class="next" onClick="location.href='experience.html'"></div>
+	</div>
+</body>
+</html>

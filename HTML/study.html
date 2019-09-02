@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>进入学习</title>
+<link href="../CSS/study.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="main">
+		<div class="nav">
+		<ul>
+			<li>
+				<a class="n" href="#"></a>
+				<ul>
+					<li><a class="n1" onClick="location.href='example1.html'"></a></li>
+					<li><a class="n2" onClick="location.href='study.html'"></a></li>
+					<li><a class="n3" onClick="location.href='experience.html'"></a></li>
+					<li><a class="n4" onClick="location.href='practice.html'"></a></li>
+					<li><a class="n5" onClick="location.href='conclude.html'"></a></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+		<div class="p1" onClick="location.href='study.html'"></div>
+		<div class="p2" onClick="location.href='part2.html'"></div>
+		<div class="p3" onClick="location.href='part3.html'"></div>
+		<div class="text">
+			<span style="color: #A2EDEA; font-size: 25px;">chapter1 变形（transform）</span>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;css3中transform主要包括以下几种：旋转(rotate),扭曲(skew)，缩放（scale)、移动(translate)和矩阵变形matrix。</p>
+   			&nbsp;&nbsp;<span style="color: #A2EDEA; font-size: 20px;">1.旋转rotate（ ）</span>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;旋转rotate()函数通过指定的角度参数使元素相对原点进行旋转。它主要在二维空间内进行操作，设置一个角度值，用来指定旋转的幅度。如果这个值为正值，元素相对原点中心顺时针旋转；如果这个值为负值，元素相对原点中心逆时针旋转。</p>
+   			&nbsp;&nbsp;<span style="color: #A2EDEA; font-size: 20px;">2.扭曲skew（ ）</span>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;扭曲skew()函数能够让元素倾斜显示。它可以将一个对象以其中心位置围绕着X轴和Y轴按照一定的角度倾斜。这与rotate()函数的旋转不同，rotate()函数只是旋转，而不会改变元素的形状。skew()函数不会旋转，而只会改变元素的形状。一共有三种情况，分别是：</p>
+   			<p>&nbsp;&nbsp;&nbsp;① skew(x,y) 使元素在水平和垂直方向同时扭曲（X轴和Y轴同时按一定的角度值进行扭曲变形），第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则值为0，也就是Y轴方向上无斜切；</p>
+   			<p>&nbsp;&nbsp;&nbsp;② skewX(x) 仅使元素在水平方向扭曲变形（X轴扭曲变形）；</p>
+   			<p>&nbsp;&nbsp;&nbsp;③ skewY(y) 仅使元素在垂直方向扭曲变形（Y轴扭曲变形）。</p>
+   			&nbsp;&nbsp;<span style="color: #A2EDEA; font-size: 20px;">3.缩放scale（ ）</span>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;缩放scale()函数让元素根据中心原点对对象进行缩放。缩放scale具有三种情况：</p>
+   			<p>&nbsp;&nbsp;&nbsp;① scale(X,Y) 使元素水平方向和垂直方向同时缩放（也就是X轴和Y轴同时缩放），注意：Y是一个可选参数，如果没有设置Y值，则表示X，Y两个方向的缩放倍数是一样的；</p>
+   			<p>&nbsp;&nbsp;&nbsp;② scaleX(x) 元素仅水平方向缩放（X轴缩放）；</p>
+   			<p>&nbsp;&nbsp;&nbsp;③ scaleY(y) 元素仅垂直方向缩放（Y轴缩放）。</p>
+   			&nbsp;&nbsp;<span style="color: #A2EDEA; font-size: 20px;">4.移动translate（ ）</span>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;translate()函数可以将元素向指定的方向移动，类似于position中的relative。或以简单的理解为，使用translate()函数，可以把元素从原来的位置移动，而不影响在X、Y轴上的任何Web组件。同样分为三种情况:</p>
+   			<p>&nbsp;&nbsp;&nbsp;① translate(x,y) 水平方向和垂直方向同时移动（也就是X轴和Y轴同时移动）；</p>
+   			<p>&nbsp;&nbsp;&nbsp;② translateX(x) 仅水平方向移动（X轴移动）；</p>
+   			<p>&nbsp;&nbsp;&nbsp;③ translateY(Y) 仅垂直方向移动（Y轴移动）。</p>
+   			&nbsp;&nbsp;<span style="color: #A2EDEA; font-size: 20px;">5.矩阵matrix（ ）</span>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;matrix() 是一个含六个值的(a,b,c,d,e,f)变换矩阵，用来指定一个2D变换，相当于直接应用一个[a b c d e f]变换矩阵。就是基于水平方向（X轴）和垂直方向（Y轴）重新定位元素,此属性值使用涉及到数学中的矩阵。</p>
+   			&nbsp;&nbsp;<span style="color: #A2EDEA; font-size: 20px;">6.原点transform-origin</span>
+   			<p>&nbsp;&nbsp;&nbsp;&nbsp;任何一个元素都有一个中心点，默认情况之下，其中心点是居于元素X轴和Y轴的50%处。在没有重置transform-origin改变元素原点位置的情况下，CSS变形进行的旋转、移动、缩放，扭曲等操作都是以元素自己中心位置进行变形。但很多时候，我们可以通过transform-origin来对元素进行原点位置改变，使元素原点不在元素的中心位置，以达到需要的原点位置。</p>
+    	</div>
+    	<div class="back" onClick="location.href='example.html'"></div>
+		<div class="next" onClick="location.href='part2.html'"></div>
+	</div>
+</body>
+</html>

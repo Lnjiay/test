@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>课后练习</title>
+<link href="../CSS/practice.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+	function check(){
+		var radios = document.getElementsByClassName("radios");
+		var scores = 0;
+		for(var i=0;i<radios.length;i++){//题数
+			var question = document.getElementsByName("q" + (i+1));
+			for(var j=0;j<question.length;j++){//选项数
+				if(question[j].checked){//该选项是否被选中
+					if(question[j].value==1){
+						document.getElementById(i).innerHTML = "<img src=\"../images/T.png\" width=\"52\" height=\"40\">";
+						scores = scores+1;
+					}
+					else{
+						document.getElementById(i).innerHTML = "<img src=\"../images/F.png\" width=\"41\" height=\"40\">";
+					}
+					break;
+				}
+			}
+		}
+		document.getElementById("score").value=scores;
+	}
+</script>
+</head>
+
+<body>
+	<div class="main">
+		<div class="nav">
+		<ul>
+			<li>
+				<a class="n" href="#"></a>
+				<ul>
+					<li><a class="n1" onClick="location.href='example1.html'"></a></li>
+					<li><a class="n2" onClick="location.href='study.html'"></a></li>
+					<li><a class="n3" onClick="location.href='experience.html'"></a></li>
+					<li><a class="n4" onClick="location.href='practice.html'"></a></li>
+					<li><a class="n5" onClick="location.href='conclude.html'"></a></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+		<div class="text">
+		<div class="radios">✈(选择) 1、下列能实现旋转变形的属性是（ ）
+			<span id="0" class="true"></span><br/><br/>
+			<label><input name="q1" type="radio" value="1" />rotate </label>
+			<label><input name="q1" type="radio" value="0" />skew </label>
+			<label><input name="q1" type="radio" value="0" />scale </label>
+			<label><input name="q1" type="radio" value="0" />translate </label>
+			</div>
+			<br/><br/>
+			<div class="radios">✈(选择) 2、下列能实现矩阵变形的是（ ）
+			<span id="1" class="true"></span><br/><br/>
+			<label><input name="q2" type="radio" value="0" />rotate </label>
+			<label><input name="q2" type="radio" value="1" />matrix </label>
+			<label><input name="q2" type="radio" value="0" />skew </label>
+			<label><input name="q2" type="radio" value="0" />scale </label>
+			</div>
+			<br/><br/>
+			<div class="radios">✈(选择) 3、下列能实现缩放变形的的属性是（ ）
+			<span id="2" class="true"></span><br/><br/>
+			<label><input name="q3" type="radio" value="0" />rotate </label>
+			<label><input name="q3" type="radio" value="0" />skew </label>
+			<label><input name="q3" type="radio" value="1" />scale </label>
+			<label><input name="q3" type="radio" value="0" />translate </label>
+			</div>
+			<br/><br/>
+			<div class="radios">✈(选择) 4、规定@keyframes动画的名称的CSS3动画的属性是（ ）
+			<span id="3" class="true"></span><br/><br/>
+			<label><input name="q4" type="radio" value="1" />animation-name </label>
+			<label><input name="q4" type="radio" value="0" />animation-direction </label><br/><br/>
+			<label><input name="q4" type="radio" value="0" />animation-play-state </label>
+			<label><input name="q4" type="radio" value="0" />animation-fill-mode </label>
+			</div>
+			<br/><br/>
+			<div class="radios">✈(选择) 5、animation-timing-function的默认属性是（ ）
+			<span id="4" class="true"></span><br/><br/>
+			<label><input name="q5" type="radio" value="0" />linear </label>
+			<label><input name="q5" type="radio" value="0" />ease-in </label>
+			<label><input name="q5" type="radio" value="1" />ease </label>
+			<label><input name="q5" type="radio" value="0" />ease-in-out </label>
+			</div>
+			<br/><br/>
+			<div class="radios">✈(选择) 6、animation-direction属性主要用来设置（ ）
+			<span id="5" class="true"></span><br/><br/>
+			<label><input name="q6" type="radio" value="1" />动画播放方向 </label>
+			<label><input name="q6" type="radio" value="0" />动画播放时间 </label>
+			<label><input name="q6" type="radio" value="0" />动画完成时间 </label>
+			<label><input name="q6" type="radio" value="0" />动画结束位置 </label>
+			</div>
+			<br/><br/>
+			<div class="radios">✈(判断) 7、在CSS3中不能够对同一个元素同时使用变形和动画。
+			<span id="6" class="true"></span><br/><br/>
+			<label><input name="q7" type="radio" value="0" />√ </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<label><input name="q7" type="radio" value="1" />× </label>
+			</div>
+			<br/><br/>
+			<div class="radios">✈(判断) 8、animation-fill-mode的属性值forwards表示动画在结束后继续应用最后的关键帧的位置。
+			<span id="7" class="true"></span><br/><br/>
+			<label><input name="q8" type="radio" value="1" />√ </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<label><input name="q8" type="radio" value="0" />× </label>
+			</div>
+			<br/><br/>
+			<div class="radios">✈(判断) 9、过渡函数中的ease-out表示速度越来越快，呈现加速状态，通常称为“渐显效果”。
+			<span id="8" class="true"></span><br/><br/>
+			<label><input name="q9" type="radio" value="0" />√ </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<label><input name="q9" type="radio" value="1" />× </label>
+			</div>
+			<br/><br/>
+			<div class="radios">✈(判断) 10、animation属性中animation-iteration-count的默认值为infinite。
+			<span id="9" class="true"></span><br/><br/>
+			<label><input name="q10" type="radio" value="0" />√ </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<label><input name="q10" type="radio" value="1" />× </label>
+			</div>
+			<br/>
+		</div>
+		<div>
+			<span class="dati">答对题数:</span>
+			<input type="text" id="score">
+			<div class="submit" onclick="check()"></div>
+			<div class="re" onClick="location.href='practice.html'"></div>
+		</div>
+		<div class="back" onClick="location.href='experience.html'"></div>
+		<div class="next" onClick="location.href='conclude.html'"></div>
+	</div>
+</body>
+</html>
