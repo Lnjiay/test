@@ -12,8 +12,8 @@
 	width: 100px;
 	height: 110px;
 	margin: 0 auto;
-	top: 480px;
-	left: 850px;
+	top: 80%;
+	left: 870px;
 }
 .index:hover{
 	transform: scale(1.1);

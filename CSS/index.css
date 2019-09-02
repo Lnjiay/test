@@ -20,8 +20,8 @@ section {
 	width: 120px;
 	height: 90px;
 	margin: 0 auto;
-	top: 480px;
-	left: 1000px;
+	top: 500px;
+	left: 72%;
 }
 .begin:hover{
 	transform: scale(1.1);
