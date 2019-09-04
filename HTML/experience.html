@@ -15,27 +15,32 @@
 			newwin.document.close();
     	}
 	}
+	function f(a){
+        var obj = document.getElementById(a);
+        if(obj.style.display=="none"){
+			obj.style.display = "";
+			}else{
+				obj.style.display = "none";
+        	}
+	}
 </script>
 </head>
 
 <body>
 	<div class="main">
 		<div class="nav">
-		<ul>
-			<li>
-				<a class="n" href="#"></a>
-				<ul>
-					<li><a class="n1" onClick="location.href='example1.html'"></a></li>
-					<li><a class="n2" onClick="location.href='study.html'"></a></li>
-					<li><a class="n3" onClick="location.href='experience.html'"></a></li>
-					<li><a class="n4" onClick="location.href='practice.html'"></a></li>
-					<li><a class="n5" onClick="location.href='conclude.html'"></a></li>
-				</ul>
-			</li>
-		</ul>
+				<a class="n" href="#" onClick="f('dis')"></a>
+				<div id="dis" style="display: none;">
+					<div class="n1" onClick="location.href='example1.html'"></div>
+					<div class="n2" onClick="location.href='study.html'"></div>
+					<div class="n3" onClick="location.href='experience.html'"></div>
+					<div class="n4" onClick="location.href='practice.html'"></div>
+					<div class="n5" onClick="location.href='conclude.html'"></div>
+				</div>
 		</div>
 		<textarea name="textarea" id="run0" style="display: none;">
-			<div class="big"><div class="test"><a style="line-height: 100px; cursor: pointer;" onclick="window.close();">back</a>
+			<div class="big"><div class="test" style="cursor: pointer;" onclick="window.close();">
+			<a style="line-height: 100px; font-size: 15px;">点击这里返回</a>
 			</div></div>
 			<style>
 				.big{
@@ -56,8 +61,8 @@
 		<textarea name="textarea" id="run1" style="display: none;">
 		<div class="big">
 			<div class="test1"></div>
-			<div class="test2">
-				<a style="line-height: 100px; cursor: pointer;" onclick="window.close();">back</a>
+			<div class="test2" style="cursor: pointer;" onclick="window.close();">
+				<a style="line-height: 100px; font-size: 15px;">点击这里返回</a>
 			</div>
 		</div>
 			<style>
@@ -87,8 +92,8 @@
 		<textarea name="textarea" id="run2" style="display: none;">
 		<div class="big">
 			<div class="test1"></div>
-			<div class="test2">
-				<a style="line-height: 100px; cursor: pointer;" onclick="window.close();">back</a>
+			<div class="test2" style="cursor: pointer;" onclick="window.close();">
+				<a style="line-height: 100px; font-size: 15px;">点击这里返回</a>
 			</div>
 		</div>
 			<style>
@@ -118,8 +123,8 @@
 		<textarea name="textarea" id="run3" style="display: none;">
 		<div class="big">
 			<div class="test1"></div>
-			<div class="test2">
-				<a style="line-height: 100px; cursor: pointer;" onclick="window.close();">back</a>
+			<div class="test2" style="cursor: pointer;" onclick="window.close();">
+				<a style="line-height: 100px; font-size: 15px;">点击这里返回</a>
 			</div>
 		</div>
 			<style>
@@ -149,8 +154,8 @@
 		<textarea name="textarea" id="run4" style="display: none;">
 		<div class="big">
 			<div class="test1"></div>
-			<div class="test2">
-				<a style="line-height: 100px; cursor: pointer;" onclick="window.close();">back</a>
+			<div class="test2" style="cursor: pointer;" onclick="window.close();">
+				<a style="line-height: 100px; font-size: 15px;">点击这里返回</a>
 			</div>
 		</div>
 			<style>
@@ -180,8 +185,8 @@
 		<textarea name="textarea" id="run5" style="display: none;">
 		<div class="big">
 			<div class="test1"></div>
-			<div class="test2">
-				<a style="line-height: 100px; cursor: pointer;" onclick="window.close();">back</a>
+			<div class="test2" style="cursor: pointer;" onclick="window.close();">
+				<a style="line-height: 100px; font-size: 15px;">点击这里返回</a>
 			</div>
 		</div>
 			<style type="text/css">
@@ -215,8 +220,8 @@
 		<textarea name="textarea" id="run6" style="display: none;">
 		<div class="big">
 			<div class="test1"></div>
-			<div class="test2">
-				<a style="line-height: 100px; cursor: pointer;" onclick="window.close();">back</a>
+			<div class="test2" style="cursor: pointer;" onclick="window.close();">
+				<a style="line-height: 100px; font-size: 15px;">点击这里返回</a>
 			</div>
 		</div>
 			<style type="text/css">
@@ -265,7 +270,7 @@
 			<div style="height: 30px;"></div>
 			<span style="color:cadetblue; font-size: 20px;">CSS3代码</span>
 			<pre style="font-family: 微软雅黑;">
-  <p style="color: cornflowerblue;">✈</p>
+  <p style="color:#657865;">✈初始div盒子效果</p>
   .test{
    		width: 100px;
    		height: 100px;
@@ -274,67 +279,73 @@
 			</pre>
 			<input onclick="runWin('run0')" type="button" value="运行代码" style="cursor:hand" class="button">
 			<pre style="font-family: 微软雅黑;">
-  <p style="color: cornflowerblue;">✈①</p>
+  <p style="color:#657865;">✈①在初始div盒子上添加顺时针旋转30度后的效果</p>
   .test{
    		width: 100px;
    		height: 100px;
    		background-color:rgba(251,0,4,0.50);
-   		transform: rotate(30deg);
+   		<span style="color:darkred;">transform: rotate(30deg);</span>
    }
 			</pre>
 			<input onclick="runWin('run1')" type="button" value="运行代码" style="cursor:hand" class="button">
 			<pre style="font-family: 微软雅黑;">
-  <p style="color: cornflowerblue;">✈②</p>
+  <p style="color:#657865;">✈②在初始div盒子上添加水平方向上扭曲30度，垂直方向上扭曲15度后的效果</p>
   .test{
    		width: 100px;
    		height: 100px;
    		backrgbaground-color: (255,118,0,0.50);
-   		transform: skew(30deg,15deg);
+   		<span style="color:darkred;">transform: skew(30deg,15deg);</span>
    }
 			</pre>
 			<input onclick="runWin('run2')" type="button" value="运行代码" style="cursor:hand" class="button">
 			<pre style="font-family: 微软雅黑;">
-  <p style="color: cornflowerblue;">✈③</p>
+  <p style="color:#657865;">✈③在初始div盒子上添加水平方向上放大2倍，垂直方向上放大1.5倍后的效果</p>
   .test{
    		width: 100px;
    		height: 100px;
    		background-color: rgba(255,237,0,0.50);
-   		transform: scale(2,1.5);
+   		<span style="color:darkred;">transform: scale(2,1.5);</span>
    }
 			</pre>
 			<input onclick="runWin('run3')" type="button" value="运行代码" style="cursor:hand" class="button">
 			<pre style="font-family: 微软雅黑;">
-  <p style="color: cornflowerblue;">✈④</p>
+  <p style="color:#657865;">✈④在初始div盒子上添加该盒子沿水平方向向右移动50px，沿垂直方向向下移动30px后的效果</p>
   .test{
    		width: 100px;
    		height: 100px;
    		background-color: rgba(18,255,0,0.50);
-   		transform: translate(50px,30px);
+   		<span style="color:darkred;">transform: translate(50px,30px);</span>
    }
 			</pre>
 			<input onclick="runWin('run4')" type="button" value="运行代码" style="cursor:hand" class="button">
 			<pre style="font-family: 微软雅黑;">
-  <p style="color: cornflowerblue;">✈⑤</p>
+  <p style="color:#657865;">✈⑤在初始div盒子上添加鼠标悬停在该盒子上后出现盒子宽度由100px变为200px的动画效果，且动画
+  	时间为2s，动画变换速度越来越快</p>
   .test{
 		 width: 100px;
 		 height: 100px;
 		 background-color:rgba(0,255,179,0.50);
    }
+   <span style="color:darkred;">
    .test:hover{
 		 width: 200px;
 		 transition-property: width;
 		 transition-duration: 2s;
 		 transition-timing-function: ease-in;
    }
+   </span>
 			</pre>
 			<input onclick="runWin('run5')" type="button" value="运行代码" style="cursor:hand" class="button">
 			<pre style="font-family: 微软雅黑;">
-  <p style="color: cornflowerblue;">✈⑥</p>
+  <p style="color:#657865;">✈⑥在初始div盒子上添加鼠标在盒子上悬停后动画时间为3s的动画效果，当动画时间由0到50%时，该
+  	盒子的宽度由100px增加到150px，当动画时间由50%到100%时，该盒子的高度由100px增加到
+  	150px</p>
   .test{
   		 width: 100px;
   		 height: 100px;
   		 background-color: rgba(10,0,255,0.50);
   }
+  <span style="color:darkred;">
   @keyframes name{
   		 0%{
   		 	width: 100px;
@@ -352,6 +363,7 @@
   .test:hover{
   		 animation: 3s name;
   }
+  </span>
 			</pre>
 			<input onclick="runWin('run6')" type="button" value="运行代码" style="cursor:hand" class="button">
 		</div>

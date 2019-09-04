@@ -4,24 +4,30 @@
 <meta charset="utf-8">
 <title>案例视频</title>
 <link href="../CSS/example.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+	function f(a){
+        var obj = document.getElementById(a);
+        if(obj.style.display=="none"){
+			obj.style.display = "";
+			}else{
+				obj.style.display = "none";
+        	}
+	}
+</script>
 </head>
 
 <body>
 	<div class="main">
-	<div class="nav">
-		<ul>
-			<li>
-				<a class="n" href="#"></a>
-				<ul>
-					<li><a class="n1" onClick="location.href='example1.html'"></a></li>
-					<li><a class="n2" onClick="location.href='study.html'"></a></li>
-					<li><a class="n3" onClick="location.href='experience.html'"></a></li>
-					<li><a class="n4" onClick="location.href='practice.html'"></a></li>
-					<li><a class="n5" onClick="location.href='conclude.html'"></a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>
+		<div class="nav">
+				<a class="n" href="#" onClick="f('dis')"></a>
+				<div id="dis" style="display: none;">
+					<div class="n1" onClick="location.href='example1.html'"></div>
+					<div class="n2" onClick="location.href='study.html'"></div>
+					<div class="n3" onClick="location.href='experience.html'"></div>
+					<div class="n4" onClick="location.href='practice.html'"></div>
+					<div class="n5" onClick="location.href='conclude.html'"></div>
+				</div>
+		</div>
 	<iframe class="v" src="../video/v2.mp4"></iframe>
 	<div class="v1" onClick="location.href='example1.html'">1</div>
 	<div class="v2" onClick="location.href='example2.html'">2</div>
