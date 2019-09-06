@@ -24,6 +24,11 @@
 			}
 		}
 		document.getElementById("score").value=scores;
+		if(scores>5){
+			alert("恭喜你！答对了"+scores+"道题！");
+		}else{
+			alert("很遗憾！你答对了"+scores+"道题！继续加油吧！");
+		}
 	}
 	function f(a){
         var obj = document.getElementById(a);
